@@ -1,17 +1,21 @@
 ## for data
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -28,21 +32,21 @@ from sklearn.metrics import accuracy_score
 #https://towardsdatascience.com/machine-learning-with-python-classification-complete-tutorial-d2c99dc524ec
 
 # Sophia
-dataset = pd.read_csv('taurus_table1(1).tsv', delimiter=';',comment='#')
-X = dataset[['sig70', 'I70peak', 'e_I70peak',
-       'C70', 'I70conv', 'S70', 'e_S70', 'a70', 'b70', 'PA70', 'sig160',
-       'I160peak', 'e_I160peak', 'C160', 'I160conv', 'S160', 'e_S160', 'a160',
-       'b160', 'PA160', 'sig250', 'I250peak', 'e_I250peak', 'C250', 'I250conv',
-       'S250', 'e_S250', 'a250', 'b250', 'PA250', 'sig350', 'I350peak',
-       'e_I350peak', 'C350', 'I350conv', 'S350', 'e_S350', 'a350', 'b350',
-       'PA350', 'sig500', 'I500peak', 'e_I500peak', 'C500', 'S500', 'e_S500',
-       'a500', 'b500', 'PA500', 'sigNH2', 'NH2peak', 'CNH2', 'NH2conv',
-       'NH2bg', 'aNH2', 'bNH2', 'PANH2', 'Nsed']]
-Y = dataset['CType']
+#dataset = pd.read_csv('taurus_table1 (1).tsv', delimiter=';',comment='#')
+#X = dataset[['sig70', 'I70peak', 'e_I70peak',
+#       'C70', 'I70conv', 'S70', 'e_S70', 'a70', 'b70', 'PA70', 'sig160',
+#      'I160peak', 'e_I160peak', 'C160', 'I160conv', 'S160', 'e_S160', 'a160',
+#       'b160', 'PA160', 'sig250', 'I250peak', 'e_I250peak', 'C250', 'I250conv',
+#       'S250', 'e_S250', 'a250', 'b250', 'PA250', 'sig350', 'I350peak',
+#       'e_I350peak', 'C350', 'I350conv', 'S350', 'e_S350', 'a350', 'b350',
+#      'PA350', 'sig500', 'I500peak', 'e_I500peak', 'C500', 'S500', 'e_S500',
+#       'a500', 'b500', 'PA500', 'sigNH2', 'NH2peak', 'CNH2', 'NH2conv',
+#       'NH2bg', 'aNH2', 'bNH2', 'PANH2', 'Nsed']]
+#Y = dataset['CType']
 
 # TASK: LOAD DATA THAT WAS GIVEN TO YOU
 # Convert dataset to a pandas dataframe
-dataset = pd.read_csv('taurus_table1(1).tsv') 
+dataset = pd.read_csv('taurus_table1 (1).tsv') 
 print(dataset.columns)
 
 # TASK: INSPECT DATA
@@ -54,7 +58,7 @@ print(dataset.columns)
 
 # TASK: DATA ENGINEERING, FEATURE ENGINEERING
 # Use head() function to return the first 5 rows: 
-print(dataset.head()) 
+'''print(dataset.head()) 
 # Assign values to the X and y variables:
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 4].values 
@@ -167,4 +171,4 @@ print(classification_report(y_test, y_predict))
 # Evaluate label (subsets) accuracy
 print(accuracy_score(y_test, y_predict))
 
-print(y_test, y_predict)
+print(y_test, y_predict)'''
