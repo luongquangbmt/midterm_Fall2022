@@ -13,34 +13,22 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import numpy as np
-## for plotting
 import matplotlib.pyplot as plt
 import seaborn as sns
-## for statistical tests
-import scipy
-#import statsmodels.formula.api as smf
-#import statsmodels.api as sm
-## for machine learning
+import scipy as sc
 from sklearn.model_selection import train_test_split
 from sklearn import model_selection, preprocessing, feature_selection, ensemble, linear_model, metrics, decomposition
-# Import Gaussian Naive Bayes classifier
 from sklearn.naive_bayes import GaussianNB
-
-# Import Evaluation Metric
 from sklearn.metrics import accuracy_score
 
 
 ## for explainer
 #from lime import lime_tabular
 
-
-#!pip3 install pandas
-
-
 #https://towardsdatascience.com/machine-learning-with-python-classification-complete-tutorial-d2c99dc524ec
 
 # Sophia
-dataset = pd.read_csv('taurus_table1.tsv', delimiter=';',comment='#')
+dataset = pd.read_csv('taurus_table1(1).tsv', delimiter=';',comment='#')
 X = dataset[['sig70', 'I70peak', 'e_I70peak',
        'C70', 'I70conv', 'S70', 'e_S70', 'a70', 'b70', 'PA70', 'sig160',
        'I160peak', 'e_I160peak', 'C160', 'I160conv', 'S160', 'e_S160', 'a160',
@@ -54,7 +42,7 @@ Y = dataset['CType']
 
 # TASK: LOAD DATA THAT WAS GIVEN TO YOU
 # Convert dataset to a pandas dataframe
-dataset = pd.read_csv('iris.csv') 
+dataset = pd.read_csv('taurus_table1(1).tsv') 
 print(dataset.columns)
 
 # TASK: INSPECT DATA
