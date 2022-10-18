@@ -129,8 +129,8 @@ print("\n Summary Statistics of the X dataframe after Standard Scaling\n", X_tra
 
 #classifiers
 classifiers = [    
-    #GaussianNB(),
-    #DecisionTreeClassifier(max_depth=5),
+    GaussianNB(),
+    DecisionTreeClassifier(max_depth=5),
     AdaBoostClassifier(),
     
     
