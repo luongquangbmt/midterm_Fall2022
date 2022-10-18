@@ -55,9 +55,9 @@ Finding the accuracy:
 
 Precision is defined as the proportion of cases found that were actually relevant.
 Recall is defined as the proportion of the relevant cases that were actually found among all the relevant cases. You can see that recall is the same as sensitivity, because recall is also given by TP/(TP+FN).
-Accuracy is defined as the ability of the classifier to select all cases that need to be selected and reject all cases that need to be rejected. For a classifier with 100% accuracy, this would imply that FN = FP = 0. Accuracy is given by (TP+TN)/(TP+FP+TN+FN).
+Accuracy is defined as the ability of the classifier to select all cases that need to be selected and reject all cases that need to be rejected. For a classifier with 100% accuracy, this would imply that FN = FP = 0. The equation for accuracy is given by (TP+TN)/(TP+FP+TN+FN).
  
-The F1 score is the combination of precision and recall. The F1 score, to use better accuracy metrics, is another way to solve class imbalance problems, which consider not only the number of prediction errors that your model makes, but that also look at the type of errors that are made.
+The F1 score is the combination of recall and precision. The F1 score, to use better accuracy metrics, is another way to solve class imbalance problems, which consider not only the number of prediction errors that your model makes, but that also look at the type of errors that are made.
 For the classification report:
                 precision    recall  f1-score   support
 
